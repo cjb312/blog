@@ -19,11 +19,13 @@ class PostsIndex extends Component {
 		});
 	}
 
+
 	render() {
 		return (
+			//when you click on a link tag it prevents some of the defualt behavior of the browser
 			<div>
 				<div className="text-xs-right">
-					<Link className="btn btn-primary" to="/posts/new">
+					<Link className="btn btn-primary" to="/posts/new"> 
 					Add a Post
 					</Link>
 				</div>
