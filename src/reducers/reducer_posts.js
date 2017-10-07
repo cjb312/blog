@@ -1,11 +1,13 @@
-import { FETCH_POSTS } from '../actions';
-import { FETCH_POST } from '../actions';
+import { FETCH_POSTS, FETCH_POST, DELETE_POST } from '../actions';
 import _ from 'lodash';
 
 //defaulting state to be an object since that will contain the array of posts
 export default function(state ={}, action) {
 
 	switch (action.type) {
+	case DELETE_POST:
+		return _.omit(state, action.payload);  //looks at state obj.  if it has a key of post.id then get rid of it(benefit of obj as app level state than an array)
+
 	case FETCH_POST: //take all the existing posts out of their state object and put into { .. state }
 		return { ...state, [action.payload.data.id]: action.payload.data}; 
 
