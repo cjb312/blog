@@ -17,7 +17,7 @@ A web application that resembles a traditional blog using React, Redux, and Reac
 - Javascript
 - Node JS
  
-# View or add a post and the landing page:
+# View or add a post on the landing page:
 <img width="1279" alt="screen shot 2017-10-10 at 6 12 18 pm" src="https://user-images.githubusercontent.com/24966013/31413450-43b02ffe-ade7-11e7-88df-4d8904deeb34.png">
 
 # While viewing a post the user may delete it:
