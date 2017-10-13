@@ -29,10 +29,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "babel-preset-stage-1": "^6.1.18",
-<<<<<<< HEAD
     "bootstrap": "^3.3.7",
-=======
->>>>>>> master
     "css-loader": "^0.28.7",
     "express": "^4.16.2",
     "img-loader": "^2.0.0",
