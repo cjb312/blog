@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchPost, deletePost } from '../actions';
+import { Container } from "reactstrap";
 
 class PostsShow extends Component {
 	componentDidMount() {
@@ -24,18 +25,24 @@ class PostsShow extends Component {
 		}
 
 		return (
-		 <div>
-		 	<Link to="/" className="btn btn-primary">Back To Index</Link>
-		 	<button
-		 		className=" btn btn-danger pull-xs-right"
-		 		onClick={this.onDeleteclick.bind(this)}
-		 	>
-		 	Delete Post
-		 	</button>
-		 	<h3>{post.title}</h3>
-		 	<h6>Categories: {post.categories}</h6>
-		 	<p>{post.content}</p>
-		 </div>
+		 <Container className="single-post-container" fluid={true}>
+			 <p className="post-titles title-header"> Title: </p>
+			 <h3 className="post-header">{post.title}</h3>
+
+			 <h6 className="post-category"> <span className="post-titles"> Category: </span> {post.categories}</h6>
+
+			 <Container className="post-info-container">
+			 	<p className="post-content">{post.content}</p>
+			 </Container>
+
+			 <Container className="button-container">
+				<Link className="pull-xs-left" to="/" className="btn btn-primary back-button">Back To Index</Link>
+				<button className="btn delete-button pull-xs-right" onClick={this.onDeleteclick.bind(this)}>
+				 Delete Post
+				</button>
+			 </Container>
+			 <div className="push"></div>
+		 </Container>
 		);
 	}
 }
@@ -48,4 +55,3 @@ export default connect(mapStateToProps, { fetchPost, deletePost })(PostsShow);
 
 
 // in bigger apps you would have mapStateToProps in its own file so this component is just for displaying
-

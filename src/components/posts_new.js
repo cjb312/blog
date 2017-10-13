@@ -3,10 +3,11 @@ import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createPost } from '../actions';
+import { Container } from "reactstrap";
 
 class PostsNew extends Component {
 	renderField(field) { //field contains event handler that makes sure <Field /> is repsonsible for this input
-		
+
 		//destructuring by accessing properites with nested for cleaner code with es6
 		const { meta: {touched, error} } = field;
 		const className = `form-group ${touched && error ? "has-danger" : ''}`;
@@ -37,32 +38,24 @@ class PostsNew extends Component {
 	render() {
 		const { handleSubmit } = this.props; //handleSubmit being passed to component on behalf of redux-form
 
-		return ( 
-			<form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-			 <Field
-			 	label="Post Title"
-				name="title"
-				component={this.renderField}
-			 />
-			 <Field
-			 	label="Categories"
-			 	name="categories"
-			 	component={this.renderField}
-			 />
-			 <Field
-			 	label="Post Content"
-			 	name="content"
-			 	component={this.renderField}
-			 />
-			 <button type="submit" className="btn btn-primary"> Submit </button>
-			 <Link to="/" className="btn btn-danger">Cancel</Link>
-			</form>
+		return (
+			<Container className="post-submit-container">
+				<form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+				 <Field className="title-field" label="Post Title" name="title" component={this.renderField} />
+				 <Field className="category-field" label="Categories" name="categories" component={this.renderField} />
+				 <Field className="content-field" label="Post Content" name="content" component={this.renderField} />
+				 <Container className="submit-button-container" fluid={true}>
+					 <button className="" type="submit" className="btn submit-button text-xs-left"> Submit </button>
+					 <Link to="/" className="btn delete-button text-xs-right">Cancel</Link>
+				</Container>
+					</form>
+			</Container>
 		);
 	}
 }
 
 function validate(values) { //values is an object that contains all info user has entered for each property
-	
+
 	//console.log(values);  -> { title; "asdf", categories: "afdad", content: "adfad"}
 	const errors = {};
 
