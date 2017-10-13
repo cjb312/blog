@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 
 // import { Container } from 'reactstrap';
 
-class Header extends Component {
+class Footer extends Component {
 
 	render() {
 
 		return (
 		 <footer className="footer">
-     </for (variable of iterable) {
-
-     }ooter>
-
+		 	<p className="footer-text"> &copy; Chris Barnes & Daniel Blanco 2017 </p>
+     </footer>
 		);
 	}
 }
 
-export default Header;
+export default Footer;

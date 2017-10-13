@@ -79,26 +79,26 @@
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _footer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/footer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _footer = __webpack_require__(495);
 
 	var _footer2 = _interopRequireDefault(_footer);
 
-	var _posts_index = __webpack_require__(514);
+	var _posts_index = __webpack_require__(496);
 
 	var _posts_index2 = _interopRequireDefault(_posts_index);
 
-	var _posts_new = __webpack_require__(515);
+	var _posts_new = __webpack_require__(497);
 
 	var _posts_new2 = _interopRequireDefault(_posts_new);
 
-	var _posts_show = __webpack_require__(516);
+	var _posts_show = __webpack_require__(517);
 
 	var _posts_show2 = _interopRequireDefault(_posts_show);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	//importing reducers
-	__webpack_require__(517);
+	__webpack_require__(518);
 
 	//importing components
 
@@ -51401,8 +51401,8 @@
 						'div',
 						{ className: 'nav-container-right' },
 						_react2.default.createElement(
-							_reactRouterDom.Link,
-							{ className: 'link-item', to: '/' },
+							'a',
+							{ className: 'link-item', href: 'https://github.com/cjb312/blog/tree/blancooo' },
 							' Github '
 						),
 						_react2.default.createElement(
@@ -51429,6 +51429,335 @@
 /* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	// import { Container } from 'reactstrap';
+
+	var Footer = function (_Component) {
+		_inherits(Footer, _Component);
+
+		function Footer() {
+			_classCallCheck(this, Footer);
+
+			return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+		}
+
+		_createClass(Footer, [{
+			key: "render",
+			value: function render() {
+
+				return _react2.default.createElement(
+					"footer",
+					{ className: "footer" },
+					_react2.default.createElement(
+						"p",
+						{ className: "footer-text" },
+						" \xA9 Chris Barnes & Daniel Blanco 2017 "
+					)
+				);
+			}
+		}]);
+
+		return Footer;
+	}(_react.Component);
+
+	exports.default = Footer;
+
+/***/ }),
+/* 496 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRedux = __webpack_require__(159);
+
+	var _actions = __webpack_require__(465);
+
+	var _reactRouterDom = __webpack_require__(205);
+
+	var _lodash = __webpack_require__(493);
+
+	var _lodash2 = _interopRequireDefault(_lodash);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PostsIndex = function (_Component) {
+		_inherits(PostsIndex, _Component);
+
+		function PostsIndex() {
+			_classCallCheck(this, PostsIndex);
+
+			return _possibleConstructorReturn(this, (PostsIndex.__proto__ || Object.getPrototypeOf(PostsIndex)).apply(this, arguments));
+		}
+
+		_createClass(PostsIndex, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.props.fetchPosts();
+			}
+		}, {
+			key: 'renderPosts',
+			value: function renderPosts() {
+				//working with an object that contains posts with the second agrument (post) returning the data
+				return _lodash2.default.map(this.props.posts, function (post) {
+					return _react2.default.createElement(
+						'li',
+						{ className: 'list-group-item', key: post.id },
+						_react2.default.createElement(
+							_reactRouterDom.Link,
+							{ className: 'post-name', to: '/posts/' + post.id },
+							post.title
+						)
+					);
+				});
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return (
+					//when you click on a link tag it prevents some of the defualt behavior of the browser
+					_react2.default.createElement(
+						'div',
+						{ className: 'posts-container' },
+						_react2.default.createElement(
+							'h3',
+							{ className: 'posts-header' },
+							'Posts'
+						),
+						_react2.default.createElement(
+							'ul',
+							{ className: 'list-group' },
+							this.renderPosts()
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'text-xs-left' },
+							_react2.default.createElement(
+								_reactRouterDom.Link,
+								{ className: 'btn btn-primary addpost-button', to: '/posts/new' },
+								'Add a Post'
+							)
+						),
+						_react2.default.createElement('div', { className: 'push' })
+					)
+				);
+			}
+		}]);
+
+		return PostsIndex;
+	}(_react.Component);
+
+	//consume anything from application level state = define map state to props function
+
+
+	function mapStateToProps(state) {
+		return { posts: state.posts };
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, { fetchPosts: _actions.fetchPosts })(PostsIndex); //action creator as an object
+
+
+	//side note: console logging this.props.posts will return two results becuase of the this.props.fetchPosts is called its rendered one time in the dom with no posts being available.
+	//the second result is once state is recalculated the problem is resolved and re-renders a populated prop of posts
+
+/***/ }),
+/* 497 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reduxForm = __webpack_require__(253);
+
+	var _reactRouterDom = __webpack_require__(205);
+
+	var _reactRedux = __webpack_require__(159);
+
+	var _actions = __webpack_require__(465);
+
+	var _reactstrap = __webpack_require__(498);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PostsNew = function (_Component) {
+		_inherits(PostsNew, _Component);
+
+		function PostsNew() {
+			_classCallCheck(this, PostsNew);
+
+			return _possibleConstructorReturn(this, (PostsNew.__proto__ || Object.getPrototypeOf(PostsNew)).apply(this, arguments));
+		}
+
+		_createClass(PostsNew, [{
+			key: 'renderField',
+			value: function renderField(field) {
+				//field contains event handler that makes sure <Field /> is repsonsible for this input
+
+				//destructuring by accessing properites with nested for cleaner code with es6
+				var _field$meta = field.meta,
+				    touched = _field$meta.touched,
+				    error = _field$meta.error;
+
+				var className = 'form-group ' + (touched && error ? "has-danger" : '');
+
+				return _react2.default.createElement(
+					'div',
+					{ className: className },
+					_react2.default.createElement(
+						'label',
+						null,
+						' ',
+						field.label,
+						' '
+					),
+					_react2.default.createElement('input', _extends({
+						className: 'form-control',
+						type: 'text'
+					}, field.input)),
+					_react2.default.createElement(
+						'div',
+						{ className: 'text-help' },
+						touched ? error : ''
+					)
+				)
+				//if the user touches a field and navigates to another but the previous field doesn't meet the validate functions paramaters
+				//the error message will then display
+				;
+			}
+		}, {
+			key: 'onSubmit',
+			value: function onSubmit(values) {
+				var _this2 = this;
+
+				this.props.createPost(values, function () {
+					_this2.props.history.push('/'); //take user back to index once a post has been created
+				});
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				var handleSubmit = this.props.handleSubmit; //handleSubmit being passed to component on behalf of redux-form
+
+				return _react2.default.createElement(
+					_reactstrap.Container,
+					{ className: 'post-submit-container' },
+					_react2.default.createElement(
+						'form',
+						{ onSubmit: handleSubmit(this.onSubmit.bind(this)) },
+						_react2.default.createElement(_reduxForm.Field, { className: 'field', label: 'Post Title', name: 'title', component: this.renderField }),
+						_react2.default.createElement(_reduxForm.Field, { className: 'field', label: 'Categories', name: 'categories', component: this.renderField }),
+						_react2.default.createElement(_reduxForm.Field, { className: 'field', label: 'Post Content', name: 'content', component: this.renderField }),
+						_react2.default.createElement(
+							_reactstrap.Container,
+							{ className: 'submit-button-container', fluid: true },
+							_react2.default.createElement(
+								'button',
+								_defineProperty({ className: '', type: 'submit' }, 'className', 'btn submit-button text-xs-left'),
+								' Submit '
+							),
+							_react2.default.createElement(
+								_reactRouterDom.Link,
+								{ to: '/', className: 'btn delete-button text-xs-right' },
+								'Cancel'
+							)
+						)
+					),
+					_react2.default.createElement('div', { className: 'push' })
+				);
+			}
+		}]);
+
+		return PostsNew;
+	}(_react.Component);
+
+	function validate(values) {
+		//values is an object that contains all info user has entered for each property
+
+		//console.log(values);  -> { title; "asdf", categories: "afdad", content: "adfad"}
+		var errors = {};
+
+		//Validate the inputs from 'values'
+		if (!values.title || values.title.length < 2) {
+			errors.title = "Enter a title that is at least 2 characters!";
+		}
+
+		if (!values.categories || values.categories.lenght < 2) {
+			errors.categories = "Enter some categories that are at leat 2 characters";
+		}
+
+		if (!values.content) {
+			errors.content = "Please enter content";
+		}
+
+		//If errors is empty, the form is fine to submit
+		//If errors has any properties, redux form assumes form is invalid
+		return errors;
+	}
+
+	exports.default = (0, _reduxForm.reduxForm)({
+		validate: validate,
+		form: 'PostsNewForm'
+	})((0, _reactRedux.connect)(null, { createPost: _actions.createPost })(PostsNew));
+
+	//values.title -> name="title" -> field.meta.error
+
+/***/ }),
+/* 498 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', { value: true });
@@ -51438,13 +51767,13 @@
 	var React = __webpack_require__(2);
 	var React__default = _interopDefault(React);
 	var PropTypes = _interopDefault(__webpack_require__(217));
-	var classNames = _interopDefault(__webpack_require__(496));
-	var isobject = _interopDefault(__webpack_require__(497));
+	var classNames = _interopDefault(__webpack_require__(499));
+	var isobject = _interopDefault(__webpack_require__(500));
 	var ReactDOM = _interopDefault(__webpack_require__(158));
-	var isFunction = _interopDefault(__webpack_require__(498));
-	var Tether = _interopDefault(__webpack_require__(499));
-	var toNumber = _interopDefault(__webpack_require__(500));
-	var reactTransitionGroup = __webpack_require__(501);
+	var isFunction = _interopDefault(__webpack_require__(501));
+	var Tether = _interopDefault(__webpack_require__(502));
+	var toNumber = _interopDefault(__webpack_require__(503));
+	var reactTransitionGroup = __webpack_require__(504);
 
 	function getTetherAttachments(placement) {
 	  var attachments = {};
@@ -55506,7 +55835,7 @@
 
 
 /***/ }),
-/* 496 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -55560,7 +55889,7 @@
 
 
 /***/ }),
-/* 497 */
+/* 500 */
 /***/ (function(module, exports) {
 
 	/**
@@ -55603,7 +55932,7 @@
 
 
 /***/ }),
-/* 498 */
+/* 501 */
 /***/ (function(module, exports) {
 
 	/**
@@ -55684,7 +56013,7 @@
 
 
 /***/ }),
-/* 499 */
+/* 502 */
 /***/ (function(module, exports) {
 
 	/*! tether 1.3.4 */
@@ -57512,7 +57841,7 @@
 	});
 
 /***/ }),
-/* 500 */
+/* 503 */
 /***/ (function(module, exports) {
 
 	/**
@@ -57683,16 +58012,16 @@
 
 
 /***/ }),
-/* 501 */
+/* 504 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _CSSTransitionGroup = __webpack_require__(502);
+	var _CSSTransitionGroup = __webpack_require__(505);
 
 	var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
 
-	var _TransitionGroup = __webpack_require__(503);
+	var _TransitionGroup = __webpack_require__(506);
 
 	var _TransitionGroup2 = _interopRequireDefault(_TransitionGroup);
 
@@ -57704,7 +58033,7 @@
 	};
 
 /***/ }),
-/* 502 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57721,15 +58050,15 @@
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
-	var _TransitionGroup = __webpack_require__(503);
+	var _TransitionGroup = __webpack_require__(506);
 
 	var _TransitionGroup2 = _interopRequireDefault(_TransitionGroup);
 
-	var _CSSTransitionGroupChild = __webpack_require__(506);
+	var _CSSTransitionGroupChild = __webpack_require__(509);
 
 	var _CSSTransitionGroupChild2 = _interopRequireDefault(_CSSTransitionGroupChild);
 
-	var _PropTypes = __webpack_require__(513);
+	var _PropTypes = __webpack_require__(516);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -57803,7 +58132,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 503 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57812,7 +58141,7 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _chainFunction = __webpack_require__(504);
+	var _chainFunction = __webpack_require__(507);
 
 	var _chainFunction2 = _interopRequireDefault(_chainFunction);
 
@@ -57828,7 +58157,7 @@
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _ChildMapping = __webpack_require__(505);
+	var _ChildMapping = __webpack_require__(508);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -58077,7 +58406,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 504 */
+/* 507 */
 /***/ (function(module, exports) {
 
 	
@@ -58103,7 +58432,7 @@
 
 
 /***/ }),
-/* 505 */
+/* 508 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58199,7 +58528,7 @@
 	}
 
 /***/ }),
-/* 506 */
+/* 509 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58208,19 +58537,19 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _addClass = __webpack_require__(507);
+	var _addClass = __webpack_require__(510);
 
 	var _addClass2 = _interopRequireDefault(_addClass);
 
-	var _removeClass = __webpack_require__(509);
+	var _removeClass = __webpack_require__(512);
 
 	var _removeClass2 = _interopRequireDefault(_removeClass);
 
-	var _requestAnimationFrame = __webpack_require__(510);
+	var _requestAnimationFrame = __webpack_require__(513);
 
 	var _requestAnimationFrame2 = _interopRequireDefault(_requestAnimationFrame);
 
-	var _properties = __webpack_require__(512);
+	var _properties = __webpack_require__(515);
 
 	var _react = __webpack_require__(2);
 
@@ -58232,7 +58561,7 @@
 
 	var _reactDom = __webpack_require__(158);
 
-	var _PropTypes = __webpack_require__(513);
+	var _PropTypes = __webpack_require__(516);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -58433,7 +58762,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 507 */
+/* 510 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58443,7 +58772,7 @@
 	});
 	exports.default = addClass;
 
-	var _hasClass = __webpack_require__(508);
+	var _hasClass = __webpack_require__(511);
 
 	var _hasClass2 = _interopRequireDefault(_hasClass);
 
@@ -58455,7 +58784,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 508 */
+/* 511 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -58470,7 +58799,7 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 509 */
+/* 512 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -58480,7 +58809,7 @@
 	};
 
 /***/ }),
-/* 510 */
+/* 513 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58489,7 +58818,7 @@
 	  value: true
 	});
 
-	var _inDOM = __webpack_require__(511);
+	var _inDOM = __webpack_require__(514);
 
 	var _inDOM2 = _interopRequireDefault(_inDOM);
 
@@ -58538,7 +58867,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 511 */
+/* 514 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -58550,7 +58879,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 512 */
+/* 515 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58560,7 +58889,7 @@
 	});
 	exports.animationEnd = exports.animationDelay = exports.animationTiming = exports.animationDuration = exports.animationName = exports.transitionEnd = exports.transitionDuration = exports.transitionDelay = exports.transitionTiming = exports.transitionProperty = exports.transform = undefined;
 
-	var _inDOM = __webpack_require__(511);
+	var _inDOM = __webpack_require__(514);
 
 	var _inDOM2 = _interopRequireDefault(_inDOM);
 
@@ -58665,7 +58994,7 @@
 	}
 
 /***/ }),
-/* 513 */
+/* 516 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58719,279 +59048,7 @@
 	})]);
 
 /***/ }),
-/* 514 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRedux = __webpack_require__(159);
-
-	var _actions = __webpack_require__(465);
-
-	var _reactRouterDom = __webpack_require__(205);
-
-	var _lodash = __webpack_require__(493);
-
-	var _lodash2 = _interopRequireDefault(_lodash);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var PostsIndex = function (_Component) {
-		_inherits(PostsIndex, _Component);
-
-		function PostsIndex() {
-			_classCallCheck(this, PostsIndex);
-
-			return _possibleConstructorReturn(this, (PostsIndex.__proto__ || Object.getPrototypeOf(PostsIndex)).apply(this, arguments));
-		}
-
-		_createClass(PostsIndex, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				this.props.fetchPosts();
-			}
-		}, {
-			key: 'renderPosts',
-			value: function renderPosts() {
-				//working with an object that contains posts with the second agrument (post) returning the data
-				return _lodash2.default.map(this.props.posts, function (post) {
-					return _react2.default.createElement(
-						'li',
-						{ className: 'list-group-item', key: post.id },
-						_react2.default.createElement(
-							_reactRouterDom.Link,
-							{ className: 'post-name', to: '/posts/' + post.id },
-							post.title
-						)
-					);
-				});
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return (
-					//when you click on a link tag it prevents some of the defualt behavior of the browser
-					_react2.default.createElement(
-						'div',
-						{ className: 'posts-container' },
-						_react2.default.createElement(
-							'h3',
-							{ className: 'posts-header' },
-							'Posts'
-						),
-						_react2.default.createElement(
-							'ul',
-							{ className: 'list-group' },
-							this.renderPosts()
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'text-xs-left' },
-							_react2.default.createElement(
-								_reactRouterDom.Link,
-								{ className: 'btn btn-primary addpost-button', to: '/posts/new' },
-								'Add a Post'
-							)
-						),
-						_react2.default.createElement('div', { className: 'push' })
-					)
-				);
-			}
-		}]);
-
-		return PostsIndex;
-	}(_react.Component);
-
-	//consume anything from application level state = define map state to props function
-
-
-	function mapStateToProps(state) {
-		return { posts: state.posts };
-	}
-
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, { fetchPosts: _actions.fetchPosts })(PostsIndex); //action creator as an object
-
-
-	//side note: console logging this.props.posts will return two results becuase of the this.props.fetchPosts is called its rendered one time in the dom with no posts being available.
-	//the second result is once state is recalculated the problem is resolved and re-renders a populated prop of posts
-
-/***/ }),
-/* 515 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reduxForm = __webpack_require__(253);
-
-	var _reactRouterDom = __webpack_require__(205);
-
-	var _reactRedux = __webpack_require__(159);
-
-	var _actions = __webpack_require__(465);
-
-	var _reactstrap = __webpack_require__(495);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var PostsNew = function (_Component) {
-		_inherits(PostsNew, _Component);
-
-		function PostsNew() {
-			_classCallCheck(this, PostsNew);
-
-			return _possibleConstructorReturn(this, (PostsNew.__proto__ || Object.getPrototypeOf(PostsNew)).apply(this, arguments));
-		}
-
-		_createClass(PostsNew, [{
-			key: 'renderField',
-			value: function renderField(field) {
-				//field contains event handler that makes sure <Field /> is repsonsible for this input
-
-				//destructuring by accessing properites with nested for cleaner code with es6
-				var _field$meta = field.meta,
-				    touched = _field$meta.touched,
-				    error = _field$meta.error;
-
-				var className = 'form-group ' + (touched && error ? "has-danger" : '');
-
-				return _react2.default.createElement(
-					'div',
-					{ className: className },
-					_react2.default.createElement(
-						'label',
-						null,
-						' ',
-						field.label,
-						' '
-					),
-					_react2.default.createElement('input', _extends({
-						className: 'form-control',
-						type: 'text'
-					}, field.input)),
-					_react2.default.createElement(
-						'div',
-						{ className: 'text-help' },
-						touched ? error : ''
-					)
-				)
-				//if the user touches a field and navigates to another but the previous field doesn't meet the validate functions paramaters
-				//the error message will then display
-				;
-			}
-		}, {
-			key: 'onSubmit',
-			value: function onSubmit(values) {
-				var _this2 = this;
-
-				this.props.createPost(values, function () {
-					_this2.props.history.push('/'); //take user back to index once a post has been created
-				});
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				var handleSubmit = this.props.handleSubmit; //handleSubmit being passed to component on behalf of redux-form
-
-				return _react2.default.createElement(
-					_reactstrap.Container,
-					{ className: 'post-submit-container' },
-					_react2.default.createElement(
-						'form',
-						{ onSubmit: handleSubmit(this.onSubmit.bind(this)) },
-						_react2.default.createElement(_reduxForm.Field, { className: 'title-field', label: 'Post Title', name: 'title', component: this.renderField }),
-						_react2.default.createElement(_reduxForm.Field, { className: 'category-field', label: 'Categories', name: 'categories', component: this.renderField }),
-						_react2.default.createElement(_reduxForm.Field, { className: 'content-field', label: 'Post Content', name: 'content', component: this.renderField }),
-						_react2.default.createElement(
-							_reactstrap.Container,
-							{ className: 'submit-button-container', fluid: true },
-							_react2.default.createElement(
-								'button',
-								_defineProperty({ className: '', type: 'submit' }, 'className', 'btn submit-button text-xs-left'),
-								' Submit '
-							),
-							_react2.default.createElement(
-								_reactRouterDom.Link,
-								{ to: '/', className: 'btn delete-button text-xs-right' },
-								'Cancel'
-							)
-						)
-					)
-				);
-			}
-		}]);
-
-		return PostsNew;
-	}(_react.Component);
-
-	function validate(values) {
-		//values is an object that contains all info user has entered for each property
-
-		//console.log(values);  -> { title; "asdf", categories: "afdad", content: "adfad"}
-		var errors = {};
-
-		//Validate the inputs from 'values'
-		if (!values.title || values.title.length < 2) {
-			errors.title = "Enter a title that is at least 2 characters!";
-		}
-
-		if (!values.categories || values.categories.lenght < 2) {
-			errors.categories = "Enter some categories that are at leat 2 characters";
-		}
-
-		if (!values.content) {
-			errors.content = "Please enter content";
-		}
-
-		//If errors is empty, the form is fine to submit
-		//If errors has any properties, redux form assumes form is invalid
-		return errors;
-	}
-
-	exports.default = (0, _reduxForm.reduxForm)({
-		validate: validate,
-		form: 'PostsNewForm'
-	})((0, _reactRedux.connect)(null, { createPost: _actions.createPost })(PostsNew));
-
-	//values.title -> name="title" -> field.meta.error
-
-/***/ }),
-/* 516 */
+/* 517 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59012,7 +59069,7 @@
 
 	var _actions = __webpack_require__(465);
 
-	var _reactstrap = __webpack_require__(495);
+	var _reactstrap = __webpack_require__(498);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -59132,7 +59189,7 @@
 	// in bigger apps you would have mapStateToProps in its own file so this component is just for displaying
 
 /***/ }),
-/* 517 */
+/* 518 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59140,7 +59197,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(518);
+	var content = __webpack_require__(519);
 	if (typeof content === 'string') content = [[module.id, content, '']];
 	// Prepare cssTransformation
 	var transform;
@@ -59148,7 +59205,7 @@
 	var options = { "hmr": true };
 	options.transform = transform;
 	// add the styles to the DOM
-	var update = __webpack_require__(520)(content, options);
+	var update = __webpack_require__(521)(content, options);
 	if (content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if (false) {
@@ -59167,21 +59224,21 @@
 	}
 
 /***/ }),
-/* 518 */
+/* 519 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(519)(undefined);
+	exports = module.exports = __webpack_require__(520)(undefined);
 	// imports
 
 
 	// module
-	exports.push([module.id, "/* ==== Fonts ==== */\n/* ===== Colors ===== */\n.App {\n  background-color: #fff8ef;\n  font-family: 'Cabin', sans-serif;\n  /* ========== Navbar ========== */\n  /* ========== AllPosts ========== */\n  /* ========== SinglePost ========== */\n  /* ===== NewPost ===== */ }\n  .App .navigation {\n    background-color: #29A0AB;\n    margin-bottom: 3%;\n    padding: 1% .5%; }\n    .App .navigation .nav-container-left {\n      display: inline-block;\n      width: 50%; }\n      .App .navigation .nav-container-left .nav-title {\n        margin: 0 0 0 3%;\n        float: left;\n        font-size: 1.3em;\n        color: #ffe7ce;\n        font-family: 'Pacifico', cursive;\n        letter-spacing: .05em; }\n    .App .navigation .nav-container-right {\n      display: inline-block;\n      width: 50%;\n      padding-right: 1%; }\n      .App .navigation .nav-container-right .link-item {\n        display: inline;\n        text-decoration: none;\n        float: right;\n        margin: 0 1% 2% 1%;\n        color: #ffe7ce;\n        font-family: 'Quicksand', sans-serif;\n        font-weight: bolder;\n        font-size: .8em; }\n  .App .posts-container {\n    margin: 1% 4%; }\n    .App .posts-container .posts-header {\n      text-align: center;\n      font-weight: bolder;\n      color: #6C2B00;\n      margin-bottom: 2%;\n      font-size: 2.5em;\n      font-family: 'Pacifico', cursive; }\n    .App .posts-container .list-group-item {\n      text-align: center; }\n      .App .posts-container .list-group-item .post-name {\n        color: #6C2B00;\n        font-weight: bolder;\n        font-size: 1.2em; }\n    .App .posts-container .addpost-button {\n      margin-top: 3.5%;\n      margin-bottom: 10%;\n      font-weight: bolder;\n      font-size: 1.1em;\n      background-color: #29A0AB;\n      color: #ffe7ce;\n      border: none;\n      padding: 1.5%;\n      border-radius: 10px; }\n  .App .single-post-container {\n    margin-top: 5%; }\n    .App .single-post-container .title-header {\n      font-size: 1.2em; }\n    .App .single-post-container .post-titles {\n      color: #6C2B00;\n      font-weight: bolder;\n      text-align: center;\n      margin: auto; }\n    .App .single-post-container .post-header {\n      text-align: center;\n      font-size: 2.5em;\n      margin: 0 0 1.3% 0; }\n    .App .single-post-container .post-category {\n      text-align: center;\n      font-size: 1.1em;\n      margin: .5% 0 3% 0; }\n    .App .single-post-container .post-info-container {\n      background-color: white;\n      border-radius: 15px;\n      padding: 2% 6%;\n      margin: 1% 9%; }\n      .App .single-post-container .post-info-container .post-content {\n        text-align: center;\n        font-size: 1.3em;\n        margin: 2%; }\n    .App .single-post-container .button-container {\n      margin-top: 5%;\n      margin-bottom: 20%; }\n      .App .single-post-container .button-container .back-button {\n        font-weight: bolder;\n        background-color: #29A0AB;\n        color: #ffe7ce;\n        border: none;\n        padding: 1.5% 2%;\n        border-radius: 10px;\n        font-size: 1.1em; }\n      .App .single-post-container .button-container .delete-button {\n        font-weight: bolder;\n        background-color: #EA4300;\n        color: #fff8ef;\n        border: none;\n        padding: 1.5% 2%;\n        border-radius: 10px;\n        font-size: 1.1em; }\n  .App .post-submit-container {\n    margin-top: 5%;\n    padding: 0 4%; }\n    .App .post-submit-container .submit-button-container {\n      margin-bottom: 20%; }\n      .App .post-submit-container .submit-button-container .submit-button {\n        font-weight: bolder;\n        background-color: #29A0AB;\n        color: #ffe7ce;\n        border: none;\n        padding: 1.5% 2%;\n        border-radius: 10px;\n        font-size: 1.1em;\n        float: left;\n        margin: 2% 0 5% 0; }\n      .App .post-submit-container .submit-button-container .delete-button {\n        font-weight: bolder;\n        background-color: #EA4300;\n        color: #fff8ef;\n        border: none;\n        padding: 1.5% 2%;\n        border-radius: 10px;\n        font-size: 1.1em;\n        float: right;\n        margin: 2% 0 5% 0; }\n\n.push {\n  height: 60px; }\n\n/* Cancel Button */\nform a {\n  margin-left: 10px; }\n", ""]);
+	exports.push([module.id, "/* ==== Fonts ==== */\n/* ===== Colors ===== */\n.App {\n  background-color: #fff8ef;\n  font-family: 'Cabin', sans-serif;\n  /* ========== Navbar ========== */\n  /* ========== AllPosts ========== */\n  /* ========== SinglePost ========== */\n  /* ===== NewPost ===== */\n  /* ===== Footer ===== */ }\n  .App .navigation {\n    background-color: #29A0AB;\n    margin-bottom: 3%;\n    padding: 1% .5%; }\n    .App .navigation .nav-container-left {\n      display: inline-block;\n      width: 50%; }\n      .App .navigation .nav-container-left .nav-title {\n        margin: 0 0 0 3%;\n        float: left;\n        font-size: 1.3em;\n        color: #ffe7ce;\n        font-family: 'Pacifico', cursive;\n        letter-spacing: .05em; }\n    .App .navigation .nav-container-right {\n      display: inline-block;\n      width: 50%;\n      padding-right: 1%; }\n      .App .navigation .nav-container-right .link-item {\n        display: inline;\n        text-decoration: none;\n        float: right;\n        margin: 0 2% 2% 1%;\n        color: #ffe7ce;\n        font-family: 'Quicksand', sans-serif;\n        font-weight: bolder;\n        font-size: .8em; }\n  .App .posts-container {\n    margin: 1% 4%; }\n    .App .posts-container .posts-header {\n      text-align: center;\n      font-weight: bolder;\n      color: #6C2B00;\n      margin-bottom: 2%;\n      font-size: 2.5em;\n      font-family: 'Pacifico', cursive; }\n    .App .posts-container .list-group-item {\n      text-align: center; }\n      .App .posts-container .list-group-item .post-name {\n        color: #6C2B00;\n        font-weight: bolder;\n        font-size: 1.2em; }\n    .App .posts-container .addpost-button {\n      margin-top: 3.5%;\n      margin-bottom: 10%;\n      font-weight: bolder;\n      font-size: 1.1em;\n      background-color: #29A0AB;\n      color: #ffe7ce;\n      border: none;\n      padding: 1.5%;\n      border-radius: 10px; }\n  .App .single-post-container {\n    margin-top: 5%;\n    margin-bottom: 40%; }\n    .App .single-post-container .title-header {\n      font-size: 1.2em; }\n    .App .single-post-container .post-titles {\n      color: #6C2B00;\n      font-weight: bolder;\n      text-align: center;\n      margin: auto; }\n    .App .single-post-container .post-header {\n      text-align: center;\n      font-size: 2.5em;\n      margin: 0 0 1.3% 0; }\n    .App .single-post-container .post-category {\n      text-align: center;\n      font-size: 1.1em;\n      margin: .5% 0 3% 0; }\n    .App .single-post-container .post-info-container {\n      background-color: white;\n      border-radius: 15px;\n      padding: 2% 6%;\n      margin: 1% 9%; }\n      .App .single-post-container .post-info-container .post-content {\n        text-align: center;\n        font-size: 1.3em;\n        margin: 2%; }\n    .App .single-post-container .button-container {\n      margin-top: 8%;\n      margin-bottom: 20%; }\n      .App .single-post-container .button-container .back-button {\n        font-weight: bolder;\n        background-color: #29A0AB;\n        color: #ffe7ce;\n        border: none;\n        padding: 1.5% 2%;\n        border-radius: 10px;\n        font-size: 1.1em; }\n      .App .single-post-container .button-container .delete-button {\n        font-weight: bolder;\n        background-color: #EA4300;\n        color: #fff8ef;\n        border: none;\n        padding: 1.5% 2%;\n        border-radius: 10px;\n        font-size: 1.1em; }\n  .App .post-submit-container {\n    margin-top: 5%;\n    margin-bottom: 25%;\n    padding: 0 4%; }\n    .App .post-submit-container .field {\n      margin-bottom: 2%; }\n    .App .post-submit-container .submit-button-container {\n      margin-bottom: 30%; }\n      .App .post-submit-container .submit-button-container .submit-button {\n        font-weight: bolder;\n        background-color: #29A0AB;\n        color: #ffe7ce;\n        border: none;\n        padding: 1.5% 3%;\n        border-radius: 10px;\n        font-size: 1.1em;\n        float: left;\n        margin: 0; }\n      .App .post-submit-container .submit-button-container .delete-button {\n        font-weight: bolder;\n        background-color: #EA4300;\n        color: #fff8ef;\n        border: none;\n        padding: 1.5% 2%;\n        border-radius: 10px;\n        font-size: 1.1em;\n        float: right;\n        margin: 0; }\n  .App .footer {\n    background-color: #29A0AB;\n    padding: 1%;\n    margin-top: 3%; }\n    .App .footer .footer-text {\n      padding-top: 15px;\n      text-align: center;\n      color: #ffe7ce; }\n\n.push {\n  height: 80px; }\n\n/* Cancel Button */\nform a {\n  margin-left: 10px; }\n", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 519 */
+/* 520 */
 /***/ (function(module, exports) {
 
 	/*
@@ -59263,7 +59320,7 @@
 
 
 /***/ }),
-/* 520 */
+/* 521 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -59319,7 +59376,7 @@
 	var	singletonCounter = 0;
 	var	stylesInsertedAtTop = [];
 
-	var	fixUrls = __webpack_require__(521);
+	var	fixUrls = __webpack_require__(522);
 
 	module.exports = function(list, options) {
 		if (false) {
@@ -59635,7 +59692,7 @@
 
 
 /***/ }),
-/* 521 */
+/* 522 */
 /***/ (function(module, exports) {
 
 	

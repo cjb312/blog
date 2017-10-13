@@ -12,7 +12,7 @@ class Header extends Component {
         <p className="nav-title"> Best Blog Ever </p>
       </div>
       <div className="nav-container-right">
-			 <Link className="link-item" to="/"> Github </Link>
+			 <a className="link-item" href="https://github.com/cjb312/blog/tree/blancooo"> Github </a>
 			 <Link className="link-item" to="/posts/new"> Add A Post </Link>
 			 <Link className="link-item" to="/"> Home </Link>
       </div>

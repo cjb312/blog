@@ -41,14 +41,15 @@ class PostsNew extends Component {
 		return (
 			<Container className="post-submit-container">
 				<form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-				 <Field className="title-field" label="Post Title" name="title" component={this.renderField} />
-				 <Field className="category-field" label="Categories" name="categories" component={this.renderField} />
-				 <Field className="content-field" label="Post Content" name="content" component={this.renderField} />
+				 <Field className="field" label="Post Title" name="title" component={this.renderField} />
+				 <Field className="field" label="Categories" name="categories" component={this.renderField} />
+				 <Field className="field" label="Post Content" name="content" component={this.renderField} />
 				 <Container className="submit-button-container" fluid={true}>
 					 <button className="" type="submit" className="btn submit-button text-xs-left"> Submit </button>
 					 <Link to="/" className="btn delete-button text-xs-right">Cancel</Link>
-				</Container>
-					</form>
+				 </Container>
+				</form>
+				<div className="push"></div>
 			</Container>
 		);
 	}
